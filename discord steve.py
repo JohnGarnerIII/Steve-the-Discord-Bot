@@ -72,7 +72,7 @@ async def on_message(message):
 
 
 
-
+    #Chat Commands
     elif "!ping" in message.content.lower():
         await message.channel.send("Pong!")
 
