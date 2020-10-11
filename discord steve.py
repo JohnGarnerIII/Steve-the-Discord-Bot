@@ -40,6 +40,9 @@ async def on_message(message):
 
     if "tanks in terraria" in message.content.lower():
         await message.channel.send("SHUT THE FUCK UP, IF YOU AREN'T PLAYING TERRARIA LEAVE THE FUCKING CHANNEL")
+    
+    if "steve you are the best" in message.content.lower():
+        await message.channel.send("No you!")
 
     if "fuck you steve" in message.content.lower():   
         await message.channel.send(random.choice(["Don't be mean please. UwU", "Get a life nerd lol", "Do you kiss your wife's boyfriend with that mouth"]))
@@ -68,6 +71,11 @@ async def on_message(message):
     if "wanna play artifact" in message.content.lower():
         await message.channel.send("Are you dumb?")
 
+    if "when are the game awards" in message.content.lower():
+        await message.channel.send("December 10th")
+    
+    if "whos hosting it" in message.content.lower():
+        await message.channel.send("Geoff Keighley")
 
 
 
