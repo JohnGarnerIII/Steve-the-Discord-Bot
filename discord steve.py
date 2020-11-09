@@ -17,11 +17,9 @@ async def on_ready():
 @client.event
 async def on_message(message):
     print(f"{message.channel}: {message.author}: {message.author.name}: {message.content}")
-    senddex_guild = client.get_guild() # discord server ID for REDACTED
-    
-    #Got rid of server ID for privacy & security reasons
+    senddex_guild = client.get_guild() 
 
-    #Check member count and logout
+    #check member count and logout
     if "steve.member_count()" == message.content.lower():
         await message.channel.send(f" {senddex_guild.member_count}")
 
@@ -29,14 +27,14 @@ async def on_message(message):
         await client.close()
 
 
+#Chat Commands for the BOT
 
 
-    #Chat Commands for the BOT
     if "hi there" in message.content.lower():
         await message.channel.send(random.choice(["Hi", "Hello"]))
     
     if "thanks steve" in message.content.lower():
-        await message.channel.send(random.choice(["No problem, anything for a Gamer", "No, thank you", "Your welcome Gamer"]))
+        await message.channel.send(random.choice(["No problem, anything for a Gamer", "No, thank you", "You are welcome Gamer"]))
 
     if "tanks in terraria" in message.content.lower():
         await message.channel.send("SHUT THE FUCK UP, IF YOU AREN'T PLAYING TERRARIA LEAVE THE FUCKING CHANNEL")
@@ -45,7 +43,7 @@ async def on_message(message):
         await message.channel.send("No you!")
 
     if "fuck you steve" in message.content.lower():   
-        await message.channel.send(random.choice(["Don't be mean please. UwU", "Get a life nerd lol", "Do you kiss your wife's boyfriend with that mouth"]))
+        await message.channel.send(random.choice(["Don't be mean please. UwU", "Get a life nerd lol", "Do you kiss ya wife's boyfriend with that mouth"]))
     
     if "do you hate women steve" in message.content.lower():
         await message.channel.send("I'm a huge fan of Affirmative Action")
@@ -63,7 +61,7 @@ async def on_message(message):
         await message.channel.send(random.choice(["It's okay Gamer, we all make mistakes.", "Apology Accepted!", "You're Gucci"]))
 
     if "thank you steve" in message.content.lower():
-        await message.channel.send("Don't sweat it Gamer Girl.")
+        await message.channel.send("Don't sweat it Gamer.")
     
     if "wanna play dota" in message.content.lower():
         await message.channel.send("Send me an invite I'll hop on.")
@@ -79,8 +77,6 @@ async def on_message(message):
 
 
 
-
-    #Chat Commands
     elif "!ping" in message.content.lower():
         await message.channel.send("Pong!")
 
@@ -92,6 +88,7 @@ async def on_message(message):
     
 
 
+#Images for BOT
 
 
 
@@ -100,23 +97,28 @@ async def on_message(message):
     #Has to be in directory of steve and not in images
     elif message.content.startswith("!test"):
         file = discord.File("cutie.png", filename="cutie.png")
-        await message.channel.send("cutie.png", file=file)
+        await message.channel.send("Awwwww!", file=file)
     
     #Testing to see if this one interferes with the previous code
     elif message.content.startswith("!bog"):
         file = discord.File("bog.jpg", filename="bog.jpg")
-        await message.channel.send("bog.jpg, file=file")
+        await message.channel.send(file=file)
     
     #JPG doesn't appear to work, testing with PNG
     elif message.content.startswith("!airlines"):
         file = discord.File("tiny.png", filename="tiny.png")
-        await message.channel.send("tiny.png", file=file)
+        await message.channel.send("Reporting for Duty!", file=file)
 
+    #Testing if discord.file needs tiny.png as a name
     elif message.content.startswith("!tiny"):
         file = discord.File("tiny.png", filename="tiny.png")
-        await message.channel.send("tiny.png", file=file)
+        await message.channel.send(file=file)
+    
+    elif message.content.startswith("!cats"):
+        file = discord.File("cats.jpg", filename="cats.jpg")
+        await message.channel.send(random.choice(["Aren't my cats adorable!", "I love my cats!"]), file=file)
 
 
 
 
-client.run("")
+client.run("NjUzNjczOTc4NTQzNjAzNzIy.Xe6btA.epExCTw78Hcjg6fsdUPnKSHaf3Q")
