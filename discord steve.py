@@ -7,7 +7,14 @@ import discord
 import asyncio
 import random
 
-client = discord.Client()
+intents = discord.Intents.default()
+client = discord.Client(intents=intents)
+
+
+guild_id = YOUR_GUILD_ID # Replace this with your guild ID as an integer
+senddex_guild = client.get_guild(guild_id)
+
+
 
 @client.event # event decorator /wrapper
 async def on_ready():
